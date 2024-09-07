@@ -4,7 +4,7 @@
     //- Keep track of the game progress
     //- Determine and announce the winner
 
-    export default class WarGame {
+    
 
         constructor(player1Name, player2Name) {
           // Your code here to set up the game
