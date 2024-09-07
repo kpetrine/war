@@ -1,34 +1,16 @@
-import card from  '/.card.js'
-import player from '/.player.js'
-import deck.js from '/.deck.js'
-import wargame.js from '/.wargame.js'
 
-const MAX_ROUNDS = 26;
-
-let players = [
-    new player('Player1');
-    new player('Player2');
-];
-
-for (let round = 1, round <= MAX_ROUNDS; round++) {
- console.log('Round ${ round }:');
-
- let highScorePlayer = null
-    for(let player of players) {
-    let player.hand(card);
-    let total = player.play(hand);
-    //console.log(player.score);
-        //console.log((player.score > (highScorePlayer?.score || 0)));
-        if(player.score > highScorePlayer?.score) {
-            highScorePlayer = player;
-        }
-    consoloe.log(' ${ player.name } plays ${ total }   (${card.join(',',)})');
-}
-console.log(' ${ highScorePlayer } wins the round! (${ highScorePlayer.score})')
-highScorePlayer.won++;
-}
-
-for(let player of players.sort((p1,p2) => p1.score > p2.score)) {
-    console.log({'${ player } wins: ${ player.won }'})
-
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Game</title>
+</head>
+<body>
+    
+    <script src="./card.js"></script>
+    <script src=".wargame.js"></script>
+    <script src="./player.js"></script>
+    
+</body>
+</html>
