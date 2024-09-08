@@ -4,6 +4,7 @@ const { expect } = require('chai');
 const { Card, Deck } = require('./path-to-your-file'); // Adjust the path to where your classes are defined
 
 // check deck class
+// Arrange
 describe('Deck Class', function() {
     let deck;
 
@@ -13,11 +14,15 @@ describe('Deck Class', function() {
     });
 
     //check deck
+    // Arrange
     describe('createDeck()', function() {
+        // Act
         it('should create a deck of 52 cards', function() {
+    
+            //Assert
             expect(deck.deck).to.have.lengthOf(52);
         });
-
+ // Act
         it('should create cards with unique suits and ranks', function() {
             const suits = ["Spades 🗡️", "Hearts ❤️", "Diamonds 💎", "Clubs 🍀"];
             const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
@@ -30,6 +35,7 @@ describe('Deck Class', function() {
 
             suits.forEach(suit => {
                 ranks.forEach(rank => {
+                     //Assert
                     expect(cardCounts.get(`${suit}-${rank}`)).to.equal(1);
                 });
             });
@@ -37,16 +43,20 @@ describe('Deck Class', function() {
     });
 
     // check shuffle
+    // Arrange
     describe('shuffle()', function() {
+         // Act
         it('should shuffle the deck so that the order of cards changes', function() {
             const originalDeck = [...deck.deck];
             deck.shuffle();
+             //Assert
             expect(deck.deck).to.not.deep.equal(originalDeck);
         });
-
+ // Act
         it('should not alter the number of cards in the deck after shuffling', function() {
             const originalLength = deck.deck.length;
             deck.shuffle();
+             //Assert
             expect(deck.deck).to.have.lengthOf(originalLength);
         });
     });
