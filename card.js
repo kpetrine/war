@@ -1,3 +1,22 @@
+/**2. Properties for suit and value
+* Deck has 52 cards, 
+* 4 suits
+* 13 ranks
+* value
+*
+* Logic
+* deck
+* ways to compare card by value
+*
+* Deck class
+* include array to store cards
+* array to store ranks
+* array to store suits
+*
+*For shuffling, use the Fisher-Yates shuffle algorithm
+*/
+
+
 //2. Properties for suit and value
 
 
